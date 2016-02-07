@@ -88,6 +88,8 @@ body { word-wrap:break-word; }
 /* Make sure scaled-down images look good in IE */
 img { -ms-interpolation-mode: bicubic; }
 
+.HTMLElement { overflow:hidden; }
+
 /* 
    css Copyright © 2005-2012 Karelia Software. All rights reserved.
    css released under Creative Commons License 
@@ -515,9 +517,44 @@ img.wide {display: block;}
 .callout-container, .graphic-container { clear:left; }
 
 /* Change the background color from white to black */
-body {background:#000000}
+body {
+  background:#000000;
+}
 
-/* We want the background of the nav controls to be black
-#title, #sitemenu-content, #page-bottom, #active, #link { background:black; }
+/* We want the background of the nav controls to be black */
+#title {
+  background:black;
+}
 
+#page-bottom {
+  background:black;
+  color:white
+}
+
+/* Default style for the nav bar */
+#sitemenu-content ul li span.in {
+    padding: 3px 5px;
+    color: white;
+    background: black;
+}
+
+/* Style the the nav bar for the page that you are on */
+#sitemenu-content{
+    font-size: 1.2em;
+}
+
+/* Style the the nav bar for the page that you are on */
+#sitemenu-content .currentPage span.in, #sitemenu-content li a:hover span.in {
+    color: #808080;
+    background-color: black;
+}
+
+/* style for horizontal bars */
+div.hr {
+  height: 2px;
+  background: #C0C0C0 url(hr1.gif) no-repeat scroll center;
+}
+div.hr hr {
+  display: none;
+}
 
