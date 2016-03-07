@@ -88,42 +88,6 @@ body { word-wrap:break-word; }
 /* Make sure scaled-down images look good in IE */
 img { -ms-interpolation-mode: bicubic; }
 
-textarea.fullWidth, input.fullWidth, select.fullWidth {
-	width:96%;
-	margin:4px 0;
-}
-textarea.fullWidth, select.fullWidth {
-	margin: 4px 1px
-}
-
-form.contactElement input.submit {
-	width:auto;
-	display:block;
-	margin-left:auto;
-	margin-right:2%;
-}
-form.contactElement th {
-	text-align:right;
-	font-weight:normal;
-	width:25%;
-}
-
-.contactError { color:red; font-weight:bold; }
-
-/* Contact Element For IE 7 */
-*:first-child+html form.contactElement input.submit {
-	padding:0px 10%;
-	min-width: 0px;
-}
-
-textarea {
-    resize: vertical;
-}
-
-form.contactElement p {
-	text-align: left;
-}
-
 /*
    css Copyright (c) 2005-2012 Karelia Software. All rights reserved.
    css released under Creative Commons License
