@@ -57,30 +57,27 @@
 										<div class="ImageElement">
 											<div class="photo">
 												<div>
-													<!-- sandvox.ImageElement --><img src="_Media/lineicon128x128_med_hr.png" alt="Line!Icon128x128" width="128" height="128" />
-													<!-- /sandvox.ImageElement --></div>
+													<!-- sandvox.ImageElement --><a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1090772813&amp;mt=8" target="_blank" class="imageLink"><span data-img-src="_Media/22_med.png" data-img-src-hr="_Media/22_med_hr.png" data-alt="22" data-width="205" data-height="244" style="width:205px; height:244px;">
+															<noscript><img src="_Media/22_med.png" alt="22" width="205" height="244" /></noscript>
+														</span>
+													</a>
+													<!-- /sandvox.ImageElement -->
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="pagelet untitled i2 e">
+								<div class="pagelet untitled i2 e last-item">
 									<div class="pagelet-body">
 										<div class="ImageElement">
 											<div class="photo">
 												<div>
-													<!-- sandvox.ImageElement --><a href="https://www.facebook.com/UrbanByte-978108002268714/" target="_blank" class="imageLink"><img src="_Media/fb_med_hr.png" alt="FB" width="100" height="101" /></a>
-													<!-- /sandvox.ImageElement --></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="pagelet titled i3 o last-item">
-									<h4 class="title pagelet-title"><span class="in"><span style="font-size: 22px; font-family: 'Helvetica Neue';">  Buy Now!</span></span></h4>
-									<div class="pagelet-body">
-										<div class="RichTextElement">
-											<div>
-												<p style="text-align: center;" class="MsoNormal"><a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1090772813&amp;mt=8" target="_blank"><img src="_Media/badge_med_hr.jpeg" alt="" width="200" height="59" class="first" /></a></p>
-												
+													<!-- sandvox.ImageElement --><a href="https://www.facebook.com/UrbanByte-978108002268714/" target="_blank" class="imageLink"><span data-img-src="_Media/facebookimage_med.png" data-img-src-hr="_Media/facebookimage_med_hr.png" data-alt="facebooKIMAGE" data-width="100" data-height="100" style="width:100px; height:100px;">
+															<noscript><img src="_Media/facebookimage_med.png" alt="facebooKIMAGE" width="100" height="100" /></noscript>
+														</span>
+													</a>
+													<!-- /sandvox.ImageElement -->
+												</div>
 											</div>
 										</div>
 									</div>
@@ -121,6 +118,9 @@
 		if (typeof jQuery === 'undefined') document.write('<scr'+'ipt src="_Resources/jquery-1.9.1.min.js"></scr'+'ipt>');
 		</script>
 		<script charset="utf-8" src="sandvox_Blueprint_modern/javascript.js"></script>
+		<script>
+		$(document).ready(function(){var e=window.devicePixelRatio&&window.devicePixelRatio>1?window.devicePixelRatio:1,t=window.innerWidth>window.innerHeight?screen.height:screen.width;$("span[data-img-src-hr]").each(function(){var n=$(this).data("width"),r=$(this).data("height"),i=$(this).data("alt"),s='<img src="',o=e>1&&n<2*t,u=0,a=$(this)[0].attributes;if(o){s+=$(this).data("img-src-hr")}else{s+=$(this).data("img-src")}s+='"';if(i)s+=' alt="'+i+'"';if(n)s+=' width="'+n+'"';if(r)s+=' height="'+r+'"';for(l=a.length;u<l;u++){var f=a[u].name;if(!f.match(/(data-width|data-height|data-alt|data-img-src)/g)){s+=" "+f+'="'+a[u].value+'"'}}s+=" />";$(this).replaceWith($(s))})})
+		</script>
 		
 	</body>
 </html>
