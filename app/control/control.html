@@ -1,0 +1,31 @@
+
+<div class="panel panel-default status-panel">
+    <div class="panel-heading">Show Selection</div>
+    <div class="container">
+      <br>
+        <div class="row">
+            <form class="form-horizontal">
+                <div class="form-group">
+                        <div class="col-md-2 col-md-offset-3">
+                        <div class="btn-group" uib-dropdown keyboard-nav>
+                            <button id="simple-btn-keyboard-nav" type="button" class="btn btn-default drop-button" uib-dropdown-toggle>
+                                {{ timeline }} <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
+                                <li ng-repeat="choice in timelines">
+                                    <a ng-click="setChoice(choice)">{{choice}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 col-md-offset-1">
+                        <button type="button" class="btn btn-info" ng-click="playShow()">Play Show</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<toast></toast>
