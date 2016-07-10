@@ -60,7 +60,7 @@ angular.module('myApp.calendar', ['ngRoute',
                 modalInstance.result.then(function(selectedItem) {
                     var updatedIndex =
                       lpc.setEvent(selectedItem.timeline, selectedItem.date);
-                    let newEvents = lpc.getAllEventsForYear(new Date().getFullYear());
+                    var newEvents = lpc.getAllEventsForYear(new Date().getFullYear());
                     $scope.events[updatedIndex] = newEvents[updatedIndex];
                 }, function() {
                     console.log("no more");
