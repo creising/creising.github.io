@@ -1,6 +1,5 @@
 <div ui-calendar="uiConfig.calendar" ng-model="eventSources">
 
-
     <script type="text/ng-template" id="eventEdit.html">
         <div class="modal-header">
             <h3 class="modal-title">Event Selection</h3>
@@ -13,15 +12,14 @@
                     <label for="simple-btn-keyboard-nav" class="col-sm-2 control-label">Event</label>
                     <div class="btn-group" uib-dropdown keyboard-nav>
                         <button id="simple-btn-keyboard-nav" type="button" class="btn btn-default drop-button" uib-dropdown-toggle>
-                            {{ timeline }} <span class="caret"></span>
+                            {{ timeline.name }} <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="simple-btn-keyboard-nav">
                             <li ng-repeat="choice in timelines">
-                                <a ng-click="setChoice(choice)">{{choice}}</a>
+                                <a ng-click="setChoice(choice)">{{ choice.name }}</a>
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </form>
 

@@ -9,6 +9,8 @@ angular.module('myApp', [
   'myApp.version',
   'myApp.lpcservice',
   'myApp.eventEdit',
+  'myApp.setup',
+  'myApp.eventImport',
   'ui.bootstrap',
   'ngToast',
   'ui.calendar'

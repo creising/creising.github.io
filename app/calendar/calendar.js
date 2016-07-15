@@ -6,7 +6,7 @@ angular.module('myApp.eventEdit', ['ngRoute',
         //   $scope.items = items;
         $scope.timelines = editConfig.all;
         $scope.timeline = editConfig.current;;
-        console.log($scope.timeline );
+        console.log($scope.timeline);
 
         $scope.setChoice = function(choice) {
             $scope.timeline = choice;
@@ -39,6 +39,7 @@ angular.module('myApp.calendar', ['ngRoute',
         function($scope, lpc, $uibModal) {
 
             $scope.timelines = lpc.getTimelines();
+            var idToMap = lpc.getEventMap();
             var openEdit = function(selectedTime) {
 
                 var modalInstance = $uibModal.open({
@@ -50,7 +51,7 @@ angular.module('myApp.calendar', ['ngRoute',
                         timelines: function() {
                             return {
                               date: selectedTime.start,
-                              current: selectedTime.title,
+                              current: {name:selectedTime.title, timelineId:selectedTime.timelineId},
                               all: $scope.timelines
                             };
                         },
@@ -60,7 +61,7 @@ angular.module('myApp.calendar', ['ngRoute',
                 modalInstance.result.then(function(selectedItem) {
                     var updatedIndex =
                       lpc.setEvent(selectedItem.timeline, selectedItem.date);
-                    let newEvents = lpc.getAllEventsForYear(new Date().getFullYear());
+                    var newEvents = lpc.getAllEventsForYear(new Date().getFullYear());
                     $scope.events[updatedIndex] = newEvents[updatedIndex];
                 }, function() {
                     console.log("no more");

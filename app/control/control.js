@@ -32,6 +32,6 @@ angular.module('myApp.control', ['ngRoute', 'ui.bootstrap', 'ngAnimate',
         }
 
         $scope.playShow = function () {
-            ngToast.create('Now playing: ' + $scope.timeline);
+            ngToast.create('Now playing: ' + $scope.timeline.name);
         }
     }]);
