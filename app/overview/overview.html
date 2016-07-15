@@ -1,0 +1,74 @@
+<div class="jumbotron">
+    <div class="container">
+        <h2>Upcoming Schedule:</h2>
+        <div class="col-md-8 col-md-offset-2">
+            <table class="table">
+                <tr ng-repeat="event in upcomingEvents">
+                    <td>
+                        <label class="key">{{event.date}}:</label>
+                    </td>
+                    <td><i>{{ event.name }}</i></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-default status-panel">
+            <div class="panel-heading">System</div>
+            <form class="form-horizontal">
+            <div class="form-group" ng-repeat="data in systemData">
+                <label class="col-sm-6 control-label">{{data.key}}</label>
+                <div class="col-sm-6">
+                    <p class="form-control-static">{{data.value}}</p>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-default status-panel">
+            <div class="panel-heading">Clock</div>
+            <form class="form-horizontal">
+            <div class="form-group" ng-repeat="data in clockData">
+                <label class="col-sm-6 control-label">{{data.key}}</label>
+                <div class="col-sm-6">
+                    <p class="form-control-static">{{data.value}}</p>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default status-panel">
+                <div class="panel-heading">Project</div>
+            <form class="form-horizontal">
+            <div class="form-group" ng-repeat="data in projectInfo">
+                <label class="col-sm-6 control-label">{{data.key}}</label>
+                <div class="col-sm-6">
+                    <p class="form-control-static">{{data.value}}</p>
+                </div>
+            </div>
+            </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default status-panel">
+                <div class="panel-heading">Software</div>
+            <form class="form-horizontal">
+            <div class="form-group" ng-repeat="data in softwareVersion">
+                <label class="col-sm-6 control-label">{{data.key}}</label>
+                <div class="col-sm-6">
+                    <p class="form-control-static">{{data.value}}</p>
+                </div>
+            </div>
+            </form>
+            </div>
+        </div>
+    </div>
