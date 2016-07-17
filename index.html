@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+      <base href="/">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title ng-bind="pageTitle"></title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width">
+
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <a class="navbar-brand" href="/overview">Overview</a>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/calendar">Calendar</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/control">Manual Control</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/setup">Setup</span></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="page-header">
+      <h1 class="text-primary">Example Property Name <small>Name of Property Manager</small></h1>
+    </div>
+
+      <div ui-view></div>
+
+      <script src="api/mockapi.js"></script>
+      <script src="js/main.js"></script>
+
+  </body>
+</html>
