@@ -3,13 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Planta Machina — MakerMayhem</title>
-<meta name="description" content="An Arabica coffee plant kept alive automatically with a pump, soil moisture sensor, grow lights, and a Raspberry Pi Zero. The build in five phases.">
+<title>Planta Machina — automated plant watering with a Raspberry Pi</title>
+<meta name="description" content="A coffee plant I kept forgetting to water, now kept alive by a Raspberry Pi Zero, a pump, a soil moisture sensor, and grow lights, plus a web dashboard.">
+<link rel="canonical" href="https://makermayham.coffee/planta-machina.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MakerMayhem">
+<meta property="og:title" content="Planta Machina — automated plant watering with a Raspberry Pi">
+<meta property="og:description" content="A coffee plant I kept forgetting to water, now kept alive by a Raspberry Pi Zero, a pump, a soil moisture sensor, and grow lights, plus a web dashboard.">
+<meta property="og:url" content="https://makermayham.coffee/planta-machina.html">
+<meta property="og:image" content="https://makermayham.coffee/assets/workshop-02-planta-machina.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Planta Machina — automated plant watering with a Raspberry Pi">
+<meta name="twitter:description" content="A coffee plant I kept forgetting to water, now kept alive by a Raspberry Pi Zero, a pump, a soil moisture sensor, and grow lights, plus a web dashboard.">
+<meta name="twitter:image" content="https://makermayham.coffee/assets/workshop-02-planta-machina.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "headline": "Planta Machina — automated plant watering with a Raspberry Pi",
+      "description": "A coffee plant I kept forgetting to water, now kept alive by a Raspberry Pi Zero, a pump, a soil moisture sensor, and grow lights, plus a web dashboard.",
+      "image": "https://makermayham.coffee/assets/workshop-02-planta-machina.jpg",
+      "url": "https://makermayham.coffee/planta-machina.html",
+      "author": { "@type": "Organization", "name": "MakerMayhem", "url": "https://makermayham.coffee/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://makermayham.coffee/" },
+        { "@type": "ListItem", "position": 2, "name": "Workshop", "item": "https://makermayham.coffee/#workshop" },
+        { "@type": "ListItem", "position": 3, "name": "Planta Machina" }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="page">
@@ -56,7 +93,7 @@
     <section class="phases">
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/plant-01-droopy.jpg" alt="A droopy, neglected Arabica coffee plant on a windowsill"></p>
+        <p class="phase__media"><img src="assets/plant-01-droopy.jpg" alt="A droopy, neglected Arabica coffee plant on a windowsill" fetchpriority="high" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">01</p>
           <p class="phase__kicker">The starting point</p>
@@ -66,7 +103,7 @@
       </article>
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/plant-02-prototyping.jpg" alt="A workbench covered in prototyping parts: a pump, relay modules, a soil moisture sensor, an LED grow light strip, and a seven-segment display"></p>
+        <p class="phase__media"><img src="assets/plant-02-prototyping.jpg" alt="A workbench covered in prototyping parts: a pump, relay modules, a soil moisture sensor, an LED grow light strip, and a seven-segment display" loading="lazy" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">02</p>
           <p class="phase__kicker">Prototyping the sensors</p>
@@ -76,7 +113,7 @@
       </article>
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/plant-03-initial-build.jpg" alt="The first build: the potted coffee plant in a dark wooden tray, flanked by two LED grow light strips, with the reservoir and electronics around it"></p>
+        <p class="phase__media"><img src="assets/plant-03-initial-build.jpg" alt="The first build: the potted coffee plant in a dark wooden tray, flanked by two LED grow light strips, with the reservoir and electronics around it" loading="lazy" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">03</p>
           <p class="phase__kicker">The first build</p>
@@ -86,7 +123,7 @@
       </article>
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/plant-04-dashboard.png" alt="The Plantio web dashboard showing plant status, soil moisture, soil temperature, grow light state, reservoir level, and a watering log"></p>
+        <p class="phase__media"><img src="assets/plant-04-dashboard.png" alt="The Plantio web dashboard showing plant status, soil moisture, soil temperature, grow light state, reservoir level, and a watering log" loading="lazy" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">04</p>
           <p class="phase__kicker">Keeping an eye on it</p>
@@ -96,7 +133,7 @@
       </article>
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/workshop-02-planta-machina.jpg" alt="The finished Planta Machina rig on a white background: a healthy green coffee plant in its tray with grow lights, reservoir, and electronics"></p>
+        <p class="phase__media"><img src="assets/workshop-02-planta-machina.jpg" alt="The finished Planta Machina rig on a white background: a healthy green coffee plant in its tray with grow lights, reservoir, and electronics" loading="lazy" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">05</p>
           <p class="phase__kicker">Today</p>
@@ -114,8 +151,8 @@
     <footer class="site-footer">
       <span>© 2026 MakerMayhem</span>
       <div class="site-footer__legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
       </div>
     </footer>
 

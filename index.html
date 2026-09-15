@@ -3,8 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MakerMayhem — Practical apps, furniture, eccentric builds</title>
-<meta name="description" content="MakerMayhem is a one-person operation that builds furniture and eccentric objects, and writes the software behind them. Apps: MakerMind.">
+<title>MakerMayhem — Furniture, Raspberry Pi builds &amp; apps</title>
+<meta name="description" content="One person, a soldering iron, and weird ideas: furniture restorations, Raspberry Pi builds, and MakerMind, an app for makers to track it all.">
+<link rel="canonical" href="https://makermayham.coffee/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MakerMayhem">
+<meta property="og:title" content="MakerMayhem — Furniture, Raspberry Pi builds &amp; apps">
+<meta property="og:description" content="One person, a soldering iron, and weird ideas: furniture restorations, Raspberry Pi builds, and MakerMind, an app for makers to track it all.">
+<meta property="og:url" content="https://makermayham.coffee/">
+<meta property="og:image" content="https://makermayham.coffee/assets/makermayhem-logo-v4.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MakerMayhem — Furniture, Raspberry Pi builds &amp; apps">
+<meta name="twitter:description" content="One person, a soldering iron, and weird ideas: furniture restorations, Raspberry Pi builds, and MakerMind, an app for makers to track it all.">
+<meta name="twitter:image" content="https://makermayham.coffee/assets/makermayhem-logo-v4.jpg">
 
 <!--
   Content flags (per design handoff). No build system here, so these are
@@ -18,6 +31,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://makermayham.coffee/#website",
+      "name": "MakerMayhem",
+      "url": "https://makermayham.coffee/",
+      "publisher": { "@id": "https://makermayham.coffee/#org" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://makermayham.coffee/#org",
+      "name": "MakerMayhem",
+      "url": "https://makermayham.coffee/",
+      "logo": "https://makermayham.coffee/assets/makermayhem-logo-v4.jpg",
+      "email": "my.maker.mayham@gmail.com",
+      "description": "A one-person operation that builds furniture and eccentric objects, and writes the software behind them."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "MakerMind",
+      "operatingSystem": "iOS",
+      "applicationCategory": "LifestyleApplication",
+      "description": "An app for makers to track ideas, follow the progress of a build, and keep a gallery of finished work.",
+      "publisher": { "@id": "https://makermayham.coffee/#org" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="page">
@@ -42,19 +87,20 @@
     </section>
 
     <section class="hero">
-      <img class="hero__logo" src="assets/makermayhem-logo-v4.png" alt="MakerMayhem — practical apps, furniture, eccentric builds">
+      <h1 class="visually-hidden">MakerMayhem — practical apps, furniture, and eccentric builds</h1>
+      <img class="hero__logo" src="assets/makermayhem-logo-v4.jpg" alt="MakerMayhem — practical apps, furniture, eccentric builds" width="1024" height="559" fetchpriority="high" decoding="async">
       <p class="hero__tagline">Just some rando with a soldering iron and weird ideas rattling around his head.</p>
     </section>
 
     <section id="apps" class="apps">
       <div class="section-bar">
-        <span>Practical apps</span>
+        <h2 class="section-bar__title">Practical apps</h2>
         <span class="section-bar__note">No. 001</span>
       </div>
       <div class="apps__grid">
         <div class="app-card">
           <div class="app-card__icon-row">
-            <img class="app-card__icon" src="assets/makermind-icon.png" alt="MakerMind app icon">
+            <img class="app-card__icon" src="assets/makermind-icon.png" alt="MakerMind app icon" width="72" height="72" loading="lazy" decoding="async">
             <div class="app-card__marks">
               <div class="mark mark--yellow"></div>
               <div class="mark mark--ink"></div>
@@ -98,13 +144,13 @@
 
     <section id="workshop" class="workshop">
       <div class="section-bar">
-        <span>Furniture &amp; eccentric builds</span>
+        <h2 class="section-bar__title">Furniture &amp; eccentric builds</h2>
         <span class="section-bar__note">Things built off screen</span>
       </div>
 
       <div class="workshop__grid">
         <a class="project-card" href="rotary-pi.html">
-          <p class="project-card__photo"><img src="assets/workshop-01-rotary-pi.jpg" alt="Rotary Pi — a vintage rotary wall phone rebuilt with a Raspberry Pi and OLED display"></p>
+          <p class="project-card__photo"><img src="assets/workshop-01-rotary-pi.jpg" alt="Rotary Pi — a vintage rotary wall phone rebuilt with a Raspberry Pi and OLED display" loading="lazy" decoding="async"></p>
           <div class="project-card__body">
             <span class="project-card__index">P—01</span>
             <h3 class="project-card__title">Rotary Pi</h3>
@@ -113,7 +159,7 @@
           </div>
         </a>
         <a class="project-card" href="planta-machina.html">
-          <p class="project-card__photo"><img src="assets/workshop-02-planta-machina.jpg" alt="Planta Machina — an automated coffee plant watering rig with grow lights, a relay-controlled pump, and a digital display"></p>
+          <p class="project-card__photo"><img src="assets/workshop-02-planta-machina.jpg" alt="Planta Machina — an automated coffee plant watering rig with grow lights, a relay-controlled pump, and a digital display" loading="lazy" decoding="async"></p>
           <div class="project-card__body">
             <span class="project-card__index">P—02</span>
             <h3 class="project-card__title">Planta Machina</h3>
@@ -122,7 +168,7 @@
           </div>
         </a>
         <a class="project-card" href="park-bench.html">
-          <p class="project-card__photo"><img src="assets/workshop-03-park-bench-restoration.jpg" alt="Park Bench Restoration — a park bench with new African teak slats and a refinished green cast-iron frame"></p>
+          <p class="project-card__photo"><img src="assets/workshop-03-park-bench-restoration.jpg" alt="Park Bench Restoration — a park bench with new African teak slats and a refinished green cast-iron frame" loading="lazy" decoding="async"></p>
           <div class="project-card__body">
             <span class="project-card__index">P—03</span>
             <h3 class="project-card__title">Park Bench Restoration</h3>
@@ -136,13 +182,13 @@
     </section>
 
     <div class="section-bar">
-      <span>The person responsible</span>
+      <h2 class="section-bar__title">The person responsible</h2>
       <span class="section-bar__note">Fig. 1</span>
     </div>
 
     <section class="about-contact">
       <div class="about-contact__portrait">
-        <img src="assets/portrait.jpeg" alt="Pencil drawing of the founder at a desk of old computers, mid-build">
+        <img src="assets/portrait.jpeg" alt="Pencil drawing of the founder at a desk of old computers, mid-build" loading="lazy" decoding="async">
         <p class="about-contact__portrait-caption">Natural habitat</p>
       </div>
       <div id="about" class="about-contact__col about-contact__col--about">
@@ -159,8 +205,8 @@
     <footer class="site-footer">
       <span>© 2026 MakerMayhem</span>
       <div class="site-footer__legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
       </div>
     </footer>
 

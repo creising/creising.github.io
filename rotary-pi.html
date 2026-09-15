@@ -3,13 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rotary Pi — MakerMayhem</title>
-<meta name="description" content="A vintage rotary wall phone gutted and rebuilt around a Raspberry Pi, from decoding the dial pulses to mounting it on the wall. The build in four phases.">
+<title>Rotary Pi — a rotary phone rebuilt on a Raspberry Pi</title>
+<meta name="description" content="A vintage rotary phone gutted and rebuilt around a Raspberry Pi 1B and an OLED. Decoding the dial pulses, rewiring the handset, and hanging it on the wall.">
+<link rel="canonical" href="https://makermayham.coffee/rotary-pi.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MakerMayhem">
+<meta property="og:title" content="Rotary Pi — a rotary phone rebuilt on a Raspberry Pi">
+<meta property="og:description" content="A vintage rotary phone gutted and rebuilt around a Raspberry Pi 1B and an OLED. Decoding the dial pulses, rewiring the handset, and hanging it on the wall.">
+<meta property="og:url" content="https://makermayham.coffee/rotary-pi.html">
+<meta property="og:image" content="https://makermayham.coffee/assets/workshop-01-rotary-pi.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rotary Pi — a rotary phone rebuilt on a Raspberry Pi">
+<meta name="twitter:description" content="A vintage rotary phone gutted and rebuilt around a Raspberry Pi 1B and an OLED. Decoding the dial pulses, rewiring the handset, and hanging it on the wall.">
+<meta name="twitter:image" content="https://makermayham.coffee/assets/workshop-01-rotary-pi.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "headline": "Rotary Pi — a rotary phone rebuilt on a Raspberry Pi",
+      "description": "A vintage rotary phone gutted and rebuilt around a Raspberry Pi 1B and an OLED. Decoding the dial pulses, rewiring the handset, and hanging it on the wall.",
+      "image": "https://makermayham.coffee/assets/workshop-01-rotary-pi.jpg",
+      "url": "https://makermayham.coffee/rotary-pi.html",
+      "author": { "@type": "Organization", "name": "MakerMayhem", "url": "https://makermayham.coffee/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://makermayham.coffee/" },
+        { "@type": "ListItem", "position": 2, "name": "Workshop", "item": "https://makermayham.coffee/#workshop" },
+        { "@type": "ListItem", "position": 3, "name": "Rotary Pi" }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="page">
@@ -56,7 +93,7 @@
     <section class="phases">
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/phone-01-decoding-pulses.jpg" alt="The rotary phone opened up on a workbench next to a laptop and monitor running pulse-decoding code"></p>
+        <p class="phase__media"><img src="assets/phone-01-decoding-pulses.jpg" alt="The rotary phone opened up on a workbench next to a laptop and monitor running pulse-decoding code" fetchpriority="high" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">01</p>
           <p class="phase__kicker">Cracking it open</p>
@@ -66,7 +103,7 @@
       </article>
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/phone-02-wiring-receiver.jpg" alt="The open phone chassis with its bells and coils, wired up with alligator clips to a Raspberry Pi for testing"></p>
+        <p class="phase__media"><img src="assets/phone-02-wiring-receiver.jpg" alt="The open phone chassis with its bells and coils, wired up with alligator clips to a Raspberry Pi for testing" loading="lazy" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">02</p>
           <p class="phase__kicker">First signs of life</p>
@@ -76,7 +113,7 @@
       </article>
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/phone-03-replacing-wire.jpg" alt="Close-up of the Bell System handset opened up to show the receiver terminals and wiring"></p>
+        <p class="phase__media"><img src="assets/phone-03-replacing-wire.jpg" alt="Close-up of the Bell System handset opened up to show the receiver terminals and wiring" loading="lazy" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">03</p>
           <p class="phase__kicker">The handset</p>
@@ -86,7 +123,7 @@
       </article>
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/phone-04-mounted.jpg" alt="The finished rotary phone mounted on a stained plywood board and wired to a Raspberry Pi"></p>
+        <p class="phase__media"><img src="assets/phone-04-mounted.jpg" alt="The finished rotary phone mounted on a stained plywood board and wired to a Raspberry Pi" loading="lazy" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">04</p>
           <p class="phase__kicker">On the wall</p>
@@ -96,7 +133,7 @@
       </article>
 
       <article class="phase">
-        <p class="phase__media"><img src="assets/workshop-01-rotary-pi.jpg" alt="The finished Rotary Pi — a vintage rotary wall phone rebuilt with a Raspberry Pi and OLED display"></p>
+        <p class="phase__media"><img src="assets/workshop-01-rotary-pi.jpg" alt="The finished Rotary Pi — a vintage rotary wall phone rebuilt with a Raspberry Pi and OLED display" loading="lazy" decoding="async"></p>
         <div class="phase__body">
           <p class="phase__num">05</p>
           <p class="phase__kicker">The finished phone</p>
@@ -114,8 +151,8 @@
     <footer class="site-footer">
       <span>© 2026 MakerMayhem</span>
       <div class="site-footer__legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
       </div>
     </footer>
 
