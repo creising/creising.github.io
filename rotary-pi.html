@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rotary Pi — MakerMayhem</title>
+<meta name="description" content="A vintage rotary wall phone gutted and rebuilt around a Raspberry Pi, from decoding the dial pulses to mounting it on the wall. The build in four phases.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+  <div class="sheet">
+
+    <header class="site-header">
+      <a class="site-header__brand" href="index.html" style="text-decoration:none;color:inherit;">
+        <div class="dot dot--yellow"></div>
+        <div class="dot dot--ink"></div>
+        <span class="site-header__wordmark">MakerMayhem</span>
+      </a>
+      <nav class="site-header__nav">
+        <a href="index.html#apps">Apps</a>
+        <a href="index.html#workshop">Workshop</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="project-back">
+      <a href="index.html#workshop">← Back to the workshop</a>
+    </section>
+
+    <section class="project-hero">
+      <p class="project-hero__eyebrow">P—01 · Furniture &amp; eccentric builds</p>
+      <h1 class="project-hero__title">Rotary Pi</h1>
+      <p class="project-hero__intro">A very old rotary phone we found in our first house, gutted and rebuilt around a Raspberry Pi 1B and a little OLED screen. Same bells, same dial, brand new brain. Here's how it came together, in four phases.</p>
+    </section>
+
+    <section class="project-spec">
+      <div class="project-spec__cell">
+        <span class="project-spec__key">Phone</span>
+        <span class="project-spec__value">Found in our first house</span>
+      </div>
+      <div class="project-spec__cell">
+        <span class="project-spec__key">Brain</span>
+        <span class="project-spec__value">Raspberry Pi 1B</span>
+      </div>
+      <div class="project-spec__cell">
+        <span class="project-spec__key">Display</span>
+        <span class="project-spec__value">Small OLED screen</span>
+      </div>
+    </section>
+
+    <section class="phases">
+
+      <article class="phase">
+        <p class="phase__media"><img src="assets/phone-01-decoding-pulses.jpg" alt="The rotary phone opened up on a workbench next to a laptop and monitor running pulse-decoding code"></p>
+        <div class="phase__body">
+          <p class="phase__num">01</p>
+          <p class="phase__kicker">Cracking it open</p>
+          <h2 class="phase__title">Decoding the dial</h2>
+          <p class="phase__text">First job: figure out how the rotary dial actually talks. The line sits normally closed and opens once per number, so a 1 is one pulse and a 9 is nine. I opened the phone up and wrote a little script to read those pulses and turn them back into digits.</p>
+        </div>
+      </article>
+
+      <article class="phase">
+        <p class="phase__media"><img src="assets/phone-02-wiring-receiver.jpg" alt="The open phone chassis with its bells and coils, wired up with alligator clips to a Raspberry Pi for testing"></p>
+        <div class="phase__body">
+          <p class="phase__num">02</p>
+          <p class="phase__kicker">First signs of life</p>
+          <h2 class="phase__title">Wiring up the receiver</h2>
+          <p class="phase__text">To check the receiver still worked, I clipped some alligator leads onto the guts and ran them to the audio out on the Raspberry Pi, then pushed a few test messages through. Old bells, new brain.</p>
+        </div>
+      </article>
+
+      <article class="phase">
+        <p class="phase__media"><img src="assets/phone-03-replacing-wire.jpg" alt="Close-up of the Bell System handset opened up to show the receiver terminals and wiring"></p>
+        <div class="phase__body">
+          <p class="phase__num">03</p>
+          <p class="phase__kicker">The handset</p>
+          <h2 class="phase__title">New wire in the handset</h2>
+          <p class="phase__text">The original handset wiring was dry-rotted and dragging down the sound quality, so it got torn out and replaced. A small fix that made a big difference.</p>
+        </div>
+      </article>
+
+      <article class="phase">
+        <p class="phase__media"><img src="assets/phone-04-mounted.jpg" alt="The finished rotary phone mounted on a stained plywood board and wired to a Raspberry Pi"></p>
+        <div class="phase__body">
+          <p class="phase__num">04</p>
+          <p class="phase__kicker">On the wall</p>
+          <h2 class="phase__title">Mounted up</h2>
+          <p class="phase__text">Finally I screwed it to a spare piece of stained plywood from the garage, Raspberry Pi and all, so the whole thing can hang on the wall and actually get used.</p>
+        </div>
+      </article>
+
+      <article class="phase">
+        <p class="phase__media"><img src="assets/workshop-01-rotary-pi.jpg" alt="The finished Rotary Pi — a vintage rotary wall phone rebuilt with a Raspberry Pi and OLED display"></p>
+        <div class="phase__body">
+          <p class="phase__num">05</p>
+          <p class="phase__kicker">The finished phone</p>
+          <h2 class="phase__title">Back in service</h2>
+          <p class="phase__text">Old dial, old bells, a Raspberry Pi doing the thinking behind them. A classic gem brought back to life.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="project-back">
+      <a href="index.html#workshop">← Back to the workshop</a>
+    </section>
+
+    <footer class="site-footer">
+      <span>© 2026 MakerMayhem</span>
+      <div class="site-footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>
