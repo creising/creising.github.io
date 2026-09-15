@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MakerMayhem — Practical apps, furniture, eccentric builds</title>
+<meta name="description" content="MakerMayhem is a one-person operation that builds furniture and eccentric objects, and writes the software behind them. Apps: MakerMind.">
+
+<!--
+  Content flags (per design handoff). No build system here, so these are
+  hand-set — flip STORE_LIVE to true and swap the CTA markup below (search
+  "App CTA") once the App Store link is real.
+    STORE_LIVE = false
+    SHOW_SPEC  = true
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+  <div class="sheet">
+
+    <header class="site-header">
+      <div class="site-header__brand">
+        <div class="dot dot--yellow"></div>
+        <div class="dot dot--ink"></div>
+        <span class="site-header__wordmark">MakerMayhem</span>
+      </div>
+      <nav class="site-header__nav">
+        <a href="#apps">Apps</a>
+        <a href="#workshop">Workshop</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="status-strip">
+      <p class="status-strip__cell status-strip__label">One-person operation — apps &amp; objects</p>
+      <p class="status-strip__cell status-strip__badge">Open for business</p>
+    </section>
+
+    <section class="hero">
+      <img class="hero__logo" src="assets/makermayhem-logo-v4.png" alt="MakerMayhem — practical apps, furniture, eccentric builds">
+      <p class="hero__tagline">One workbench, two kinds of output. I make furniture and odd objects, and I write the software I wanted while making them.</p>
+    </section>
+
+    <section id="apps" class="apps">
+      <div class="section-bar">
+        <span>Practical apps</span>
+        <span class="section-bar__note">No. 001</span>
+      </div>
+      <div class="apps__grid">
+        <div class="app-card">
+          <div class="app-card__icon-row">
+            <img class="app-card__icon" src="assets/makermind-icon.png" alt="MakerMind app icon">
+            <div class="app-card__marks">
+              <div class="mark mark--yellow"></div>
+              <div class="mark mark--ink"></div>
+            </div>
+          </div>
+          <div>
+            <h3 class="app-card__title">MakerMind</h3>
+            <p class="app-card__description">A place for makers to track ideas, follow the progress of a build, and keep a gallery of finished work.</p>
+          </div>
+          <div class="app-card__cta">
+            <!-- App CTA: STORE_LIVE = false -> pending state. Swap for the <a class="btn-store"> below once real. -->
+            <span class="btn-pending">In review — coming soon</span>
+            <!--
+            <a class="btn-store" href="#">Get on App Store</a>
+            -->
+          </div>
+        </div>
+        <div class="spec-panel">
+          <p class="spec-panel__label">Specification</p>
+          <dl class="spec-panel__rows">
+            <div class="spec-panel__row">
+              <dt>Idea log</dt>
+              <dd>Yes</dd>
+            </div>
+            <div class="spec-panel__row">
+              <dt>Build progress</dt>
+              <dd>Yes</dd>
+            </div>
+            <div class="spec-panel__row">
+              <dt>Personal gallery</dt>
+              <dd>Yes</dd>
+            </div>
+            <div class="spec-panel__row">
+              <dt>Ads / tracking</dt>
+              <dd>None</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="workshop" class="workshop">
+      <div class="section-bar">
+        <span>Furniture &amp; eccentric builds</span>
+        <span class="section-bar__note">Things built off screen</span>
+      </div>
+
+      <div class="workshop__grid">
+        <article class="project-card">
+          <p class="project-card__photo">PHOTO</p>
+          <div class="project-card__body">
+            <span class="project-card__index">P—01</span>
+            <h3 class="project-card__title">Project title</h3>
+            <p class="project-card__caption">Material, one detail worth knowing.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <p class="project-card__photo">PHOTO</p>
+          <div class="project-card__body">
+            <span class="project-card__index">P—02</span>
+            <h3 class="project-card__title">Project title</h3>
+            <p class="project-card__caption">Material, one detail worth knowing.</p>
+          </div>
+        </article>
+        <article class="project-card">
+          <p class="project-card__photo">PHOTO</p>
+          <div class="project-card__body">
+            <span class="project-card__index">P—03</span>
+            <h3 class="project-card__title">Project title</h3>
+            <p class="project-card__caption">Material, one detail worth knowing.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="workshop__note">MakerMind was built to keep track of these</p>
+    </section>
+
+    <section class="about-contact">
+      <div id="about" class="about-contact__col about-contact__col--about">
+        <p class="about-contact__label">About</p>
+        <p class="body">MakerMayhem is a one-person operation. I build things in a workshop and I build software, and the two keep feeding each other.</p>
+        <p class="body">Everything here is made and supported by the same person who answers your email.</p>
+      </div>
+      <div id="contact" class="about-contact__col">
+        <p class="about-contact__label">Contact</p>
+        <a class="contact-email" href="mailto:hello@makermayhem.com">hello@makermayhem.com</a>
+        <p class="contact-note">Support replies within two business days.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© 2026 MakerMayhem</span>
+      <div class="site-footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>
