@@ -95,19 +95,10 @@ img {
   gap: 10px;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-
-.dot--yellow {
-  background: var(--yellow);
-}
-
-.dot--ink {
-  background: var(--ink);
-  border: 2px solid var(--paper-on-dark);
+.site-header__mark {
+  display: block;
+  width: 32px;
+  height: 32px;
 }
 
 .site-header__wordmark {
@@ -580,6 +571,18 @@ a.project-card:hover .project-card__more {
   text-transform: uppercase;
 }
 
+.site-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-footer__stamp {
+  display: block;
+  width: auto;
+  height: 34px;
+}
+
 .site-footer__legal {
   display: flex;
   gap: 24px;
@@ -602,6 +605,13 @@ a.project-card:hover .project-card__more {
   border-bottom: 3px solid var(--ink);
   background: var(--paper-hero);
   padding: 40px 22px 34px;
+}
+
+.project-hero__stamp {
+  display: block;
+  width: auto;
+  height: 104px;
+  margin: 0 0 20px;
 }
 
 .project-hero__eyebrow {
