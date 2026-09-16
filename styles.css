@@ -523,7 +523,7 @@ a.project-card:hover .project-card__more {
 }
 
 .about-contact__col--about {
-  border-right: 3px solid var(--ink);
+  /* no border-right: About is now the last column */
 }
 
 .about-contact__label {
