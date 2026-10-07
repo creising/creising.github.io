@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overhead — tracking the planes above the house with an old SDR</title>
+<meta name="description" content="An old RTL-SDR dongle, dump1090 and a homemade web app that shows every plane in range, tracks one, projects where it's headed, and looks up its route and airframe.">
+<link rel="canonical" href="https://makermayhem.coffee/overhead.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="MakerMayhem">
+<meta property="og:title" content="Overhead — tracking the planes above the house with an old SDR">
+<meta property="og:description" content="An old RTL-SDR dongle, dump1090 and a homemade web app that shows every plane in range, tracks one, projects where it's headed, and looks up its route and airframe.">
+<meta property="og:url" content="https://makermayhem.coffee/overhead.html">
+<meta property="og:image" content="https://makermayhem.coffee/assets/workshop-04-overhead.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Overhead — tracking the planes above the house with an old SDR">
+<meta name="twitter:description" content="An old RTL-SDR dongle, dump1090 and a homemade web app that shows every plane in range, tracks one, projects where it's headed, and looks up its route and airframe.">
+<meta name="twitter:image" content="https://makermayhem.coffee/assets/workshop-04-overhead.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CreativeWork",
+      "headline": "Overhead — tracking the planes above the house with an old SDR",
+      "description": "An old RTL-SDR dongle, dump1090 and a homemade web app that shows every plane in range, tracks one, projects where it's headed, and looks up its route and airframe.",
+      "image": "https://makermayhem.coffee/assets/workshop-04-overhead.jpg",
+      "url": "https://makermayhem.coffee/overhead.html",
+      "author": { "@type": "Organization", "name": "MakerMayhem", "url": "https://makermayhem.coffee/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://makermayhem.coffee/" },
+        { "@type": "ListItem", "position": 2, "name": "Workshop", "item": "https://makermayhem.coffee/#workshop" },
+        { "@type": "ListItem", "position": 3, "name": "Overhead" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<div class="page">
+  <div class="sheet">
+
+    <header class="site-header">
+      <a class="site-header__brand" href="index.html" style="text-decoration:none;color:inherit;">
+        <img class="site-header__mark" src="favicon.png" alt="" width="32" height="32" decoding="async">
+        <span class="site-header__wordmark">MakerMayhem</span>
+      </a>
+      <nav class="site-header__nav">
+        <a href="index.html#apps">Apps</a>
+        <a href="index.html#workshop">Workshop</a>
+      </nav>
+    </header>
+
+    <section class="project-back">
+      <a href="index.html#workshop">← Back to the workshop</a>
+    </section>
+
+    <section class="project-hero">
+      <p class="project-hero__eyebrow">P—04 · Furniture &amp; eccentric builds</p>
+      <h1 class="project-hero__title">Overhead</h1>
+      <p class="project-hero__intro">I had an old SDR dongle kicking around and always wanted to see if it could pick up the planes flying over the house. Turns out it can. Every airliner up there is broadcasting where it is, so I built an app that listens, puts them all on a map, and tells me where they came from and where they're going. Here's how it came together, in four phases.</p>
+    </section>
+
+    <section class="project-spec">
+      <div class="project-spec__cell">
+        <span class="project-spec__key">Radio</span>
+        <span class="project-spec__value">NooElec NESDR Mini (R820T)</span>
+      </div>
+      <div class="project-spec__cell">
+        <span class="project-spec__key">Listening on</span>
+        <span class="project-spec__value">1090 MHz ADS-B</span>
+      </div>
+      <div class="project-spec__cell">
+        <span class="project-spec__key">Software</span>
+        <span class="project-spec__value">dump1090, Python, Leaflet</span>
+      </div>
+    </section>
+
+    <section class="phases">
+
+      <article class="phase">
+        <p class="phase__media"><img src="assets/overhead-01-sdr-dongle.jpg" alt="A well-used NooElec NESDR Mini R820T SDR USB dongle with its antenna cable on a paint-stained workbench" fetchpriority="high" decoding="async"></p>
+        <div class="phase__body">
+          <p class="phase__num">01</p>
+          <p class="phase__kicker">Out of the drawer</p>
+          <h2 class="phase__title">Tuning in to 1090</h2>
+          <p class="phase__text">Planes constantly broadcast ADS-B messages on 1090 MHz with their position, altitude, speed and callsign. This little RTL-SDR stick can hear them with just a small antenna. After telling Linux to stop treating it as a TV tuner, I let dump1090 do the hard part: it decodes the raw radio pulses and writes out a snapshot of every aircraft it can hear, about once a second.</p>
+        </div>
+      </article>
+
+      <article class="phase">
+        <p class="phase__media"><img src="assets/overhead-02-live-map.jpg" alt="A dark map of the area around Asheville with range rings and several color-coded aircraft markers labeled with callsign and flight level, above a 24-hour replay timeline" loading="lazy" decoding="async"></p>
+        <div class="phase__body">
+          <p class="phase__num">02</p>
+          <p class="phase__kicker">Everything in range</p>
+          <h2 class="phase__title">Planes on a map</h2>
+          <p class="phase__text">The app reads dump1090's snapshot, works out each plane's distance, bearing and angle above the horizon from my antenna, and streams it all live to a map in the browser. Markers are colored by altitude, with range rings out to 30 nautical miles. It also saves everything to a small database, so I can drag back through the last 24 hours and replay what flew over.</p>
+        </div>
+      </article>
+
+      <article class="phase">
+        <p class="phase__media"><img src="assets/overhead-03-projection.jpg" alt="A tracked Delta flight, DAL3116, with a dashed projected path ahead of it marked at one-minute intervals out to five minutes" loading="lazy" decoding="async"></p>
+        <div class="phase__body">
+          <p class="phase__num">03</p>
+          <p class="phase__kicker">Picking one out</p>
+          <h2 class="phase__title">Tracking and projecting</h2>
+          <p class="phase__text">Tap a plane and you can track it. The app draws a line out ahead of it using its current heading and ground speed, with a dot for each of the next five minutes, so you can see where it'll be before it gets there. Radio data can be noisy, so the tracker also ignores any altitude reading that jumps further than a real plane could climb or dive.</p>
+        </div>
+      </article>
+
+      <article class="phase">
+        <p class="phase__media"><img src="assets/overhead-04-flight-detail.jpg" alt="The flight detail card for DAL3116 showing distance, altitude, speed, vertical rate, squawk and signal strength, with the route Atlanta to Asheville and aircraft type Boeing 717-200 from 2001" loading="lazy" decoding="async"></p>
+        <div class="phase__body">
+          <p class="phase__num">04</p>
+          <p class="phase__kicker">Who's up there</p>
+          <h2 class="phase__title">Filling in the details</h2>
+          <p class="phase__text">The radio tells you where a plane is, not where it's going. When I select a flight, the app looks up its route and airline on FlightAware's AeroAPI. It also checks a local copy of the FAA aircraft registry for the make, model and year, and grabs a photo of that exact airframe from planespotters.net. Here, a Delta 717 built in 2001, on its way in from Atlanta to Asheville.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="project-back">
+      <a href="index.html#workshop">← Back to the workshop</a>
+    </section>
+
+    <footer class="site-footer">
+      <span class="site-footer__brand">
+        <img class="site-footer__stamp" src="assets/stamp-light.png" alt="MakerMayhem" width="42" height="34" loading="lazy" decoding="async">
+        © 2026 MakerMayhem
+      </span>
+      <div class="site-footer__legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>
