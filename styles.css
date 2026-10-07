@@ -585,12 +585,14 @@ a.project-card:hover .project-card__more {
 
 .site-footer__legal {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 10px 24px;
 }
 
 .site-footer__legal a {
   color: var(--yellow);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .site-footer__legal a:hover {
